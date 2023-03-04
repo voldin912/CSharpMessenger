@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:orientation="vertical">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:outlineProvider="none"
+		app:elevation="0dp" 
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:theme="@style/ToolbarTheme"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="?attr/colorFill"
+			app:titleTextAppearance="@style/Toolbar.TitleText">
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout>
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clickable="true"
+		android:focusable="false"
+		android:focusableInTouchMode="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout
+			android:id="@+id/Main_Linear"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clickable="true"
+			android:focusable="false"
+			android:background="?attr/colorFill"
+			android:focusableInTouchMode="true"
+			android:orientation="vertical">
+
+			<View
+				android:layout_height="10dp"
+				android:layout_width="match_parent" />
+			 
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<FrameLayout
+					android:layout_width="75dp"
+					android:layout_height="75dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginStart="10dp"
+					android:layout_gravity="start|center"
+					android:background="@drawable/shape_circle_white"
+					android:backgroundTint="@color/accentLight">
+					<ImageView
+						android:id="@+id/groupCover"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:scaleType="centerCrop"/>
+					<ImageView
+						android:id="@+id/btn_selectimage"
+						android:layout_width="24dp"
+						android:layout_height="24dp"
+						android:layout_gravity="center"
+						android:tint="@color/accent"
+						android:src="@drawable/icon_camera_vector"/>
+				</FrameLayout>
+
+				<LinearLayout
+					android:layout_marginStart="10dp"
+					android:layout_marginEnd="10dp"
+					android:layout_width="match_parent"
+					android:layout_gravity="center"
+					android:orientation="horizontal"
+					android:layout_height="wrap_content">
+					<com.aghajari.emojiview.view.AXEmojiEditText
+						android:id="@+id/groupName"
+						style="@style/EditTextNormalStyle"
+						android:layout_width="0dp"
+						android:layout_height="40dp"
+						android:layout_weight="1"
+						android:hint="@string/Lbl_EnterGroupName"
+						android:textSize="14sp"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:maxLines="1"
+						android:layout_gravity="start|center"
+						android:inputType="text" />
+					<ImageView
+						android:id="@+id/emojiicon"
+						android:layout_width="45dp"
+						android:layout_height="45dp"
+						android:background="?attr/selectableItemBackgroundBorderless"
+						android:clickable="true"
+						android:padding="10dp"
+						android:layout_gravity="center_vertical"
+						android:scaleType="fitCenter"
+						android:tint="@color/accent"
+						android:src="@drawable/icon_smile_vector" />
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<View
+				android:layout_height="25dp"
+				android:layout_width="match_parent" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/userRecyler"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				android:scrollbars="vertical"
+				android:layout_marginTop="8dp" />
+
+			<!--Buttons Section -->
+			<LinearLayout
+				android:paddingTop="5dp"
+				android:layout_marginTop="0dp"
+				android:layout_marginBottom="10dp"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:gravity="center_horizontal"
+				android:layout_height="wrap_content">
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/createGroupButton"
+					android:layout_below="@+id/Resetbutton"
+					android:background="@drawable/round_button_pressed"
+					android:layout_height="48dp"
+					android:layout_width="match_parent"
+					android:padding="5dp"
+					android:text="@string/Lbl_Create"
+					android:textColor="@color/gnt_white"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:clickable="true"
+					android:layout_marginEnd="30dp"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="19dp"
+					android:gravity="center"
+					android:layout_marginBottom="10dp" />
+				<TextView
+					android:id="@+id/exitGroupButton"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="3dp"
+					android:text="@string/Lbl_ExitGroup"
+					android:textSize="16sp"
+					android:layout_centerHorizontal="true"
+					android:textColor="@color/accent"
+					android:textAllCaps="true"
+					android:visibility="gone"
+					android:layout_marginEnd="10dp" />
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/deleteGroupButton"
+					android:layout_below="@+id/Resetbutton"
+					android:background="@drawable/round_button_pressed"
+					android:layout_height="48dp"
+					android:layout_width="match_parent"
+					android:padding="5dp"
+					android:text="@string/Lbl_DeleteGroup"
+					android:textColor="@color/gnt_white"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:clickable="true"
+					android:visibility="gone"
+					android:layout_marginEnd="30dp"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="19dp"
+					android:gravity="center"
+					android:layout_marginBottom="10dp" />
+			</LinearLayout>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>

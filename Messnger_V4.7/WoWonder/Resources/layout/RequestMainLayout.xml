@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded"
+	android:background="?attr/colorFill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:outlineProvider="none"
+		app:elevation="0dp" 
+		android:background="?attr/colorFill"
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:theme="@style/ToolbarTheme"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="?attr/colorFill"
+			app:titleTextAppearance="@style/Toolbar.TitleText">
+      </androidx.appcompat.widget.Toolbar>
+	    <com.google.android.material.tabs.TabLayout
+		    android:id="@+id/tabs"
+		    android:background="?attr/colorFill"
+		    app:tabTextColor="?attr/colorHint" 
+		    app:tabSelectedTextColor="@color/accent"
+		    app:tabMode="fixed"
+		    app:tabGravity="fill"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" 
+		    app:tabIndicatorColor="@color/accent" />
+     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

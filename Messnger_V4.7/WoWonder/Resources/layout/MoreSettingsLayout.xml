@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="185dp"
+	android:layout_height="wrap_content"
+	app:cardBackgroundColor="?attr/colorFill"
+	app:cardCornerRadius="10dp"
+	app:cardElevation="3dp"
+	app:cardUseCompatPadding="true">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/InviteFriendsLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_Invite_Friends" />
+
+		<TextView
+			android:id="@+id/RateOurAppLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_RateOurApp" />
+
+		<TextView
+			android:id="@+id/AboutUsLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_AboutUs" />
+
+		<TextView
+			android:id="@+id/ContactUsLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_ContactUs" />
+
+		<TextView
+			android:id="@+id/PrivacyPolicyLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_PrivacyPolicy" />
+
+		<TextView
+			android:id="@+id/TermsOfUseLayout"
+			android:background="?attr/selectableItemBackground"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:text="@string/Lbl_TermsOfUse" />
+
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

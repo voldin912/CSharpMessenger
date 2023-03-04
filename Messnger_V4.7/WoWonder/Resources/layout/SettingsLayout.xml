@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="?attr/colorFill"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:outlineProvider="none"
+		app:elevation="0dp"
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:theme="@style/ToolbarTheme"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="?attr/colorFill"
+			app:titleTextAppearance="@style/Toolbar.TitleText">
+
+			<ImageView
+				android:id="@+id/IconMore"
+				android:layout_alignParentEnd="true"
+				android:layout_height="30dp"
+				android:layout_width="30dp"
+				android:padding="8dp"
+				android:layout_marginEnd="10dp"
+				android:tint="?attr/colorHint"
+				android:src="@drawable/icon_more_vector"
+				android:layout_gravity="end" />
+
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout>
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clipToPadding="false"
+		android:scrollbars="none"
+		android:scrollingCache="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="?attr/colorBubble">
+			 
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/round_button_gray"
+				android:backgroundTint="?attr/colorFill"
+				android:layout_marginEnd="20dp"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginBottom="16dp"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="77dp"
+					android:gravity="center_vertical"
+					android:layout_marginStart="10dp"
+					android:orientation="horizontal">
+					<ImageView
+						android:id="@+id/imageUser"
+						android:layout_width="52dp"
+						android:layout_height="52dp"
+						android:gravity="start|center"
+						android:src="@drawable/no_profile_image_circle" />
+					<FrameLayout
+						android:id="@+id/top_layout_account"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginEnd="70dp"
+							android:layout_marginStart="10dp"
+							android:layout_gravity="center_vertical"
+							android:gravity="center_vertical"
+							android:orientation="vertical">
+							<TextView
+								android:id="@+id/name"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:drawablePadding="4dp"
+								android:text="Wael anjo"
+								android:textSize="20sp"
+								android:textStyle="bold" />
+							<TextView
+								android:id="@+id/username"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@Waelanjo"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact" />
+						</LinearLayout>
+						<TextView
+							android:id="@+id/bt_toggle_account"
+							android:layout_width="?attr/actionBarSize"
+							android:layout_height="?attr/actionBarSize"
+							android:tint="?attr/colorHint"
+							android:gravity="center"
+							android:textSize="20sp"
+							android:layout_gravity="end"
+							android:text="Ic" />
+					</FrameLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_account"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:layout_marginStart="20dp"
+					android:layout_marginEnd="20dp"
+					android:layout_marginBottom="10dp"
+					android:visibility="gone"
+					android:orientation="vertical">
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/recyler"
+						android:clickable="true"
+						android:focusable="false"
+						android:focusableInTouchMode="true"
+						tools:listitem="@layout/Style_SelectAccountView"
+						app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:scrollbars="none" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/content_frame"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingStart="20dp"
+				android:paddingBottom="10dp"
+				android:paddingEnd="20dp"
+				android:orientation="vertical">
+
+				<!--General-->
+				<LinearLayout
+					android:id="@+id/top_layout_general"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="0dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_General"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_general"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_marginBottom="5dp"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/EditProfileLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_PersonalInformation"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_UpdateProfile_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/MyAccountLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_AccountInformation"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_MyAccount_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/BlockUserLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_BlockedUsers"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_BlockUser_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/DeleteAccountLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_DeleteAccount"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_DeleteAccount_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/LogoutLayout"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Logout"
+								android:textFontWeight="400" />
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--Display-->
+				<LinearLayout
+					android:id="@+id/top_layout_display"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_Display"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_display"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/WallpaperLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Wallpaper"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Wallpaper_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/ThemeLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Theme"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_Theme"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Light"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--Security-->
+				<LinearLayout
+					android:id="@+id/top_layout_security"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_Security"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_security"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/ChangePasswordLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Change_Password"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_ChangePassword_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/TwoFactorLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_TwoFactor"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_TwoFactor_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/ManageSessionsLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_ManageSessions"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_ManageSessions_Sub"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/FingerprintLockLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_FingerprintLock"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Summary_FingerprintLock"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/SwitchPIP"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginEnd="10dp"
+							android:checked="false"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--Storage-->
+				<LinearLayout
+					android:id="@+id/top_layout_storage"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_MediaAutoDownload"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_storage"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/StorageConnectedMobileLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_StorageConnectedMobile"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_StorageConnectedMobile"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_NoMedia"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/StorageConnectedWiFiLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_StorageConnectedWiFi"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_StorageConnectedWiFi"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_NoMedia"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--Privacy-->
+				<LinearLayout
+					android:id="@+id/top_layout_privacy"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_Privacy"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_privacy"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/WhoCanFollowMeLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Who_can_follow_me"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_WhoCanFollowMe"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Everyone"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/WhoCanMessageMeLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Who_can_message_me"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_WhoCanMessageMe"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Everyone"
+								android:layout_marginTop="0dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/WhoCanSeeMyBirthdayLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Who_can_see_my_birthday"
+								android:textFontWeight="400" />
+							<TextView
+								android:id="@+id/summary_WhoCanSeeMyBirthday"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Everyone"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<ImageView
+							android:layout_width="35dp"
+							android:layout_height="35dp"
+							android:layout_gravity="center"
+							android:padding="4dp"
+							android:layout_marginEnd="10dp"
+							android:rotation="180"
+							android:background="@drawable/shape_circle_white"
+							android:backgroundTint="?attr/colorBubble"
+							android:tint="?attr/colorReact"
+							android:src="@drawable/recv_ic_arrow"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/OnlineUsersLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_ShowOnlineUsers"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Summary_OnlineUsers"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/SwitchOnlineUsers"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginEnd="10dp"
+							android:checked="false"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--Notification-->
+				<LinearLayout
+					android:id="@+id/top_layout_notification"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:minHeight="25dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="8dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="18sp"
+						android:text="@string/Lbl_Message_Notifications"
+						android:textFontWeight="400"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/lyt_expand_notification"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/ChatHeadsLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_ChatHeads"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_EnableChatHead_SubTitle3"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/SwitchChatHeads"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginEnd="10dp"
+							android:checked="false"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/NotificationPopupLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Notification_Popup"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Summary_notifications"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<CheckBox
+							android:id="@+id/CheckBoxNotificationPopup"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginEnd="10dp"
+							android:checked="true"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/PlaySoundsLayout"
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_marginTop="12dp"
+						android:background="@drawable/round_button_gray"
+						android:backgroundTint="?attr/colorFill"
+						android:gravity="center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							android:layout_marginStart="10dp"
+							android:layout_marginEnd="5dp"
+							android:layout_weight="1">
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="14sp"
+								android:text="@string/Lbl_Conversation_tones"
+								android:textFontWeight="400" />
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:text="@string/Lbl_Summary_Play_sounds"
+								android:layout_marginTop="4dp"
+								android:textSize="12sp"
+								android:textColor="?attr/colorReact"
+								android:textFontWeight="300"/>
+						</LinearLayout>
+
+						<CheckBox
+							android:id="@+id/CheckBoxPlaySounds"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:layout_marginEnd="10dp"
+							android:checked="true"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:padding="10dp">
+
+				<TextView
+					android:id="@+id/VersionValue"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/Lbl_BuildVersion"
+					android:textSize="12sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+					android:textColor="@color/gnt_gray" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_height="20dp"
+				android:layout_width="match_parent" />
+			<WoWonder.Helpers.Ads.TemplateView
+				android:id="@+id/my_template"
+				android:padding="8dp"
+				android:visibility="gone"
+				app:gnt_template_type="@layout/gnt_medium_template_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true" />
+			<View
+				android:layout_height="?android:attr/actionBarSize"
+				android:layout_width="match_parent" />
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

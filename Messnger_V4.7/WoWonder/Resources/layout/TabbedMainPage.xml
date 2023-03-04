@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:fab="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:background="?attr/colorFill"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:id="@+id/callLayout"
+		android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		 android:visibility="gone"
+		 android:orientation="horizontal"
+		 android:background="@color/accent">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginStart="5dp"
+			android:lines="1"
+			android:text="Wael anjo"
+			android:textSize="16sp"
+			android:textColor="@color/gnt_white"/>
+		<View
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_weight="1"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginEnd="5dp"
+			android:drawableStart="@drawable/icon_call_answer_vector"
+			android:drawablePadding="8dp"
+			android:lines="1"
+			android:text="0:00"
+			android:textSize="16sp"
+			android:textColor="@color/gnt_white"/>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@id/appbar"
+	    android:paddingEnd="10dp"
+	    android:paddingStart="12dp"
+        android:layout_marginStart="2dp"
+	    android:background="@color/gnt_white"
+	    android:layout_height="?attr/actionBarSize"
+		android:layout_alignParentTop="true"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<TextView
+			android:textStyle="bold"
+			android:textColor="@color/accent"
+			android:textSize="18dp"
+			android:id="@+id/appName"
+	        android:layout_marginTop="1dp"
+			android:text="@string/Lbl_Tab_Chats"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<View
+			android:layout_width="0dp"
+			android:layout_height="1dp"
+			android:layout_weight="1"/>
+		<ImageView
+			android:id="@+id/searchButton"
+			android:background="@drawable/custom_ripple"
+			android:layout_toStartOf="@+id/moreButton"
+			android:tint="?attr/colorHint"
+			android:src="@drawable/icon_eva_search_vector"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="5dp"
+			android:padding="5dp"
+			android:layout_width="35dp"
+			android:layout_height="35dp" />
+		<ImageView
+			android:id="@+id/friendsButton"
+			android:background="@drawable/custom_ripple"
+			android:layout_toStartOf="@+id/moreButton"
+			android:tint="?attr/colorHint"
+			android:src="@drawable/icon_user_vector"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="5dp"
+			android:padding="5dp"
+			android:layout_width="35dp"
+			android:layout_height="35dp" />
+		<ImageView
+			android:id="@+id/discoverButton"
+			android:src="@drawable/icon_map_vector"
+			android:background="@drawable/custom_ripple"
+			android:tint="@color/accent"
+			android:clickable="true"
+			android:layout_centerVertical="true"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="5dp"
+			android:padding="5dp"
+			android:layout_width="35dp"
+			android:layout_height="35dp" />
+	</LinearLayout>
+
+	<androidx.viewpager2.widget.ViewPager2
+		android:layout_below="@+id/appbar"
+		android:id="@+id/viewpager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginBottom="55dp"/>
+
+	<include
+		android:id="@+id/bottomnavigationtab"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:layout_gravity="bottom"
+		layout="@layout/BottomNavigationTab" />
+
+</RelativeLayout>

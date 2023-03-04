@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorFill" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+	<FrameLayout
+		android:layout_marginTop="50dp"
+		android:layout_width="225dp"
+		android:layout_height="225dp"
+		android:layout_gravity="center"
+		android:background="@drawable/circlegradient"  >
+		<ImageView
+			android:id="@+id/image"
+			android:layout_gravity="center"
+			android:layout_width="133dp"
+			android:layout_height="133dp"
+			android:gravity="center" />
+	</FrameLayout>
+	<TextView 
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/title"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/description"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp" /> 
+</LinearLayout>

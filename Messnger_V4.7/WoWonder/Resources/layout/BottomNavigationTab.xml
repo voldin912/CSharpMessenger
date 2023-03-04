@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomnavigationtab"
+    android:layout_width="match_parent"
+	android:layout_height="55dp"
+	android:layout_gravity="bottom"
+	android:clipToPadding="true"  
+	android:background="@drawable/rounded_dialog" > 
+	<LinearLayout
+		android:id="@+id/tab" 
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:layout_gravity="bottom" >
+		<LinearLayout
+			android:id="@+id/llChat"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="?attr/selectableItemBackground"
+			android:orientation="vertical">
+			<ImageView
+				android:layout_width="39dp"
+				android:layout_height="39dp"
+				android:padding="6dp"
+				android:id="@+id/ivChat" 
+				android:tint="@color/accent"
+				android:src="@drawable/icon_chats_vector" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/llStory"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="?attr/selectableItemBackground"
+			android:orientation="vertical">
+			<ImageView
+				android:layout_width="38dp"
+				android:layout_height="38dp"
+				android:padding="7dp"
+				android:id="@+id/ivStory"
+				android:tint="#DDDDDD"
+				android:src="@drawable/icon_stories_vector" />
+		</LinearLayout> 
+		<LinearLayout
+			android:id="@+id/llAdd"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="?attr/selectableItemBackground"
+			android:orientation="vertical">
+
+			<ImageView
+				android:layout_width="39dp"
+				android:layout_height="39dp"
+				android:padding="7dp"
+				android:id="@+id/Image"
+				android:tint="#DDDDDD"
+				android:foregroundTint="#DDDDDD"
+				android:src="@drawable/icon_add_circle_vector" />
+			
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/llCall"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="?attr/selectableItemBackground"
+			android:orientation="vertical">
+			<ImageView
+				android:layout_width="39dp"
+				android:layout_height="39dp"
+				android:padding="7dp"
+				android:id="@+id/ivCall"
+				android:tint="#DDDDDD"
+				android:src="@drawable/icon_calls_vector" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/llMore"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="?attr/selectableItemBackground"
+			android:orientation="vertical">
+			<ImageView
+				android:layout_width="38dp"
+				android:layout_height="38dp"
+				android:padding="8dp"
+				android:id="@+id/ivMore"
+				android:tint="#dddddd" 
+				android:src="@drawable/icon_tab_user_vector" />
+		</LinearLayout>
+	</LinearLayout> 
+</LinearLayout> 

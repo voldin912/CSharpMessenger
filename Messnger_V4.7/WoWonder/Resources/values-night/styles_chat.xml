@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<!--Color-->
+	<style name="Chatththemeb582af" parent="MyTheme_Dark">
+		<item name="colorPrimary">#db69ce</item>
+		<item name="colorAccent">#b582af</item>
+		<item name="colorPrimaryDark">#b582af</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea84849" parent="MyTheme_Dark">
+		<item name="colorPrimary">#e85657</item>
+		<item name="colorAccent">#a84849</item>
+		<item name="colorPrimaryDark">#a84849</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef9c270" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f9c270</item>
+		<item name="colorAccent">#f9c270</item>
+		<item name="colorPrimaryDark">#f9c270</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme70a0e0" parent="MyTheme_Dark">
+		<item name="colorPrimary">#5794e6</item>
+		<item name="colorAccent">#70a0e0</item>
+		<item name="colorPrimaryDark">#70a0e0</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme56c4c5" parent="MyTheme_Dark">
+		<item name="colorPrimary">#31a7a8</item>
+		<item name="colorAccent">#56c4c5</item>
+		<item name="colorPrimaryDark">#56c4c5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef33d4c" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f33d4c</item>
+		<item name="colorAccent">#f33d4c</item>
+		<item name="colorPrimaryDark">#f33d4c</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea1ce79" parent="MyTheme_Dark">
+		<item name="colorPrimary">#7eba49</item>
+		<item name="colorAccent">#a1ce79</item>
+		<item name="colorPrimaryDark">#a1ce79</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea085e2" parent="MyTheme_Dark">
+		<item name="colorPrimary">#a085e2</item>
+		<item name="colorAccent">#a085e2</item>
+		<item name="colorPrimaryDark">#a085e2</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemeed9e6a" parent="MyTheme_Dark">
+		<item name="colorPrimary">#ed9e6a</item>
+		<item name="colorAccent">#ed9e6a</item>
+		<item name="colorPrimaryDark">#ed9e6a</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme2b87ce" parent="MyTheme_Dark">
+		<item name="colorPrimary">#34a2f7</item>
+		<item name="colorAccent">#2b87ce</item>
+		<item name="colorPrimaryDark">#2b87ce</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef2812b" parent="MyTheme_Dark">
+		<item name="colorPrimary">#fa750f</item>
+		<item name="colorAccent">#f2812b</item>
+		<item name="colorPrimaryDark">#f2812b</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme0ba05d" parent="MyTheme_Dark">
+		<item name="colorPrimary">#25db89</item>
+		<item name="colorAccent">#0ba05d</item>
+		<item name="colorPrimaryDark">#0ba05d</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme0e71ea" parent="MyTheme_Dark">
+		<item name="colorPrimary">#2065ba</item>
+		<item name="colorAccent">#0e71ea</item>
+		<item name="colorPrimaryDark">#0e71ea</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemeaa2294" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f03ad2</item>
+		<item name="colorAccent">#aa2294</item>
+		<item name="colorPrimaryDark">#aa2294</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemef9a722" parent="MyTheme_Dark">
+		<item name="colorPrimary">#bf8424</item>
+		<item name="colorAccent">#f9a722</item>
+		<item name="colorPrimaryDark">#f9a722</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme008484" parent="MyTheme_Dark">
+		<item name="colorPrimary">#2fbdbd</item>
+		<item name="colorAccent">#008484</item>
+		<item name="colorPrimaryDark">#008484</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththeme5462a5" parent="MyTheme_Dark">
+		<item name="colorPrimary">#5462a5</item>
+		<item name="colorAccent">#5462a5</item>
+		<item name="colorPrimaryDark">#5462a5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemefc9cde" parent="MyTheme_Dark">
+		<item name="colorPrimary">#e058b6</item>
+		<item name="colorAccent">#fc9cde</item>
+		<item name="colorPrimaryDark">#fc9cde</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme51bcbc" parent="MyTheme_Dark">
+		<item name="colorPrimary">#51bcbc</item>
+		<item name="colorAccent">#51bcbc</item>
+		<item name="colorPrimaryDark">#51bcbc</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemec9605e" parent="MyTheme_Dark">
+		<item name="colorPrimary">#fa6e6b</item>
+		<item name="colorAccent">#c9605e</item>
+		<item name="colorPrimaryDark">#c9605e</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme01a5a5" parent="MyTheme_Dark">
+		<item name="colorPrimary">#4fdbdb</item>
+		<item name="colorAccent">#01a5a5</item>
+		<item name="colorPrimaryDark">#01a5a5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+	</style>
+
+	<style name="Chatththeme056bba" parent="MyTheme_Dark">
+		<item name="colorPrimary">#3994db</item>
+		<item name="colorAccent">#056bba</item>
+		<item name="colorPrimaryDark">#056bba</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme8ec96c" parent="MyTheme_Dark">
+		<item name="colorPrimary">#88de57</item>
+		<item name="colorAccent">#8ec96c</item>
+		<item name="colorPrimaryDark">#8ec96c</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme609b41" parent="MyTheme_Dark">
+		<item name="colorPrimary">#609b41</item>
+		<item name="colorAccent">#609b41</item>
+		<item name="colorPrimaryDark">#609b41</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemeff72d2" parent="MyTheme_Dark">
+		<item name="colorPrimary">#bd4296</item>
+		<item name="colorAccent">#ff72d2</item>
+		<item name="colorPrimaryDark">#ff72d2</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemedefault" parent="MyTheme_Dark">
+		<item name="colorPrimary">@color/primaryDark</item>
+		<item name="colorAccent">@color/accent</item>
+		<item name="colorPrimaryDark">@color/primaryDark</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<!--==============================================-->
+	<!--Dark Color-->
+	<!--==============================================-->
+
+	<style name="Chatththemeb582af_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#db69ce</item>
+		<item name="colorAccent">#b582af</item>
+		<item name="colorPrimaryDark">#b582af</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea84849_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#e85657</item>
+		<item name="colorAccent">#a84849</item>
+		<item name="colorPrimaryDark">#a84849</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef9c270_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f9c270</item>
+		<item name="colorAccent">#f9c270</item>
+		<item name="colorPrimaryDark">#f9c270</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme70a0e0_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#5794e6</item>
+		<item name="colorAccent">#70a0e0</item>
+		<item name="colorPrimaryDark">#70a0e0</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme56c4c5_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#31a7a8</item>
+		<item name="colorAccent">#56c4c5</item>
+		<item name="colorPrimaryDark">#56c4c5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef33d4c_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f33d4c</item>
+		<item name="colorAccent">#f33d4c</item>
+		<item name="colorPrimaryDark">#f33d4c</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea1ce79_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#7eba49</item>
+		<item name="colorAccent">#a1ce79</item>
+		<item name="colorPrimaryDark">#a1ce79</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemea085e2_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#a085e2</item>
+		<item name="colorAccent">#a085e2</item>
+		<item name="colorPrimaryDark">#a085e2</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemeed9e6a_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#ed9e6a</item>
+		<item name="colorAccent">#ed9e6a</item>
+		<item name="colorPrimaryDark">#ed9e6a</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme2b87ce_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#34a2f7</item>
+		<item name="colorAccent">#2b87ce</item>
+		<item name="colorPrimaryDark">#2b87ce</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemef2812b_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#fa750f</item>
+		<item name="colorAccent">#f2812b</item>
+		<item name="colorPrimaryDark">#f2812b</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme0ba05d_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#25db89</item>
+		<item name="colorAccent">#0ba05d</item>
+		<item name="colorPrimaryDark">#0ba05d</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme0e71ea_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#2065ba</item>
+		<item name="colorAccent">#0e71ea</item>
+		<item name="colorPrimaryDark">#0e71ea</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemeaa2294_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#f03ad2</item>
+		<item name="colorAccent">#aa2294</item>
+		<item name="colorPrimaryDark">#aa2294</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemef9a722_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#bf8424</item>
+		<item name="colorAccent">#f9a722</item>
+		<item name="colorPrimaryDark">#f9a722</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme008484_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#2fbdbd</item>
+		<item name="colorAccent">#008484</item>
+		<item name="colorPrimaryDark">#008484</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththeme5462a5_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#5462a5</item>
+		<item name="colorAccent">#5462a5</item>
+		<item name="colorPrimaryDark">#5462a5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemefc9cde_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#e058b6</item>
+		<item name="colorAccent">#fc9cde</item>
+		<item name="colorPrimaryDark">#fc9cde</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme51bcbc_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#51bcbc</item>
+		<item name="colorAccent">#51bcbc</item>
+		<item name="colorPrimaryDark">#51bcbc</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemec9605e_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#fa6e6b</item>
+		<item name="colorAccent">#c9605e</item>
+		<item name="colorPrimaryDark">#c9605e</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme01a5a5_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#4fdbdb</item>
+		<item name="colorAccent">#01a5a5</item>
+		<item name="colorPrimaryDark">#01a5a5</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+	</style>
+
+	<style name="Chatththeme056bba_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#3994db</item>
+		<item name="colorAccent">#056bba</item>
+		<item name="colorPrimaryDark">#056bba</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme8ec96c_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#88de57</item>
+		<item name="colorAccent">#8ec96c</item>
+		<item name="colorPrimaryDark">#8ec96c</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththeme609b41_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#609b41</item>
+		<item name="colorAccent">#609b41</item>
+		<item name="colorPrimaryDark">#609b41</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+
+	<style name="Chatththemeff72d2_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">#bd4296</item>
+		<item name="colorAccent">#ff72d2</item>
+		<item name="colorPrimaryDark">#ff72d2</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+
+	<style name="Chatththemedefault_Dark" parent="MyTheme_Dark">
+		<item name="colorPrimary">@color/primaryDark</item>
+		<item name="colorAccent">@color/accent</item>
+		<item name="colorPrimaryDark">@color/primaryDark</item>
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">true</item>
+		<item name="android:popupMenuStyle">@style/CustomPopupTheme</item>
+	</style>
+</resources>

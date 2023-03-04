@@ -1,0 +1,387 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<ApplicationId>com.wowondermessenger.app</ApplicationId>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<Copyright>Copyright © 2023</Copyright>
+		<AndroidSigningKeyStore>KeyApk\wowondermessenger.keystore</AndroidSigningKeyStore>
+		<Title>WoWonder Messenger</Title>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<JavaMaximumHeapSize>3G</JavaMaximumHeapSize>
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyAlias>wowondermessenger</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>aaaaaaaa</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>aaaaaaaa</AndroidSigningKeyPass>
+		<NoWarn>1701;1702;CA1416;CA1422</NoWarn>
+		<PublishTrimmed>False</PublishTrimmed>
+		<RunAOTCompilation>False</RunAOTCompilation>
+		<AndroidUseAapt2>True</AndroidUseAapt2>
+		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<JavaMaximumHeapSize>3G</JavaMaximumHeapSize>
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyAlias>wowondermessenger</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>aaaaaaaa</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>aaaaaaaa</AndroidSigningKeyPass>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+		<NoWarn>1701;1702;CA1416;CA1422</NoWarn>
+		<PublishTrimmed>True</PublishTrimmed>
+		<RunAOTCompilation>True</RunAOTCompilation>
+		<AndroidUseAapt2>True</AndroidUseAapt2>
+		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+	<!--android-arm - android-arm64 - android-x86 - android-x64 -->
+	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)'))=='android'">
+		<RuntimeIdentifiers>android-arm;android-arm64</RuntimeIdentifiers>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Resources\drawable\icon_reset_vector.xml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <AndroidResource Include="Resources\drawable-hdpi\addImage.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ChatHeads.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\CodeVerification.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\default_group.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\default_page.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ic_trash_action.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ic_trash_fixed.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ImagePlacholder.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ImagePlacholder_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\ImagePlacholder_circle_grey.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Image_File.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\logo.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\msg_round_load_m.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\no_profile_female_image.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\no_profile_female_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\no_profile_image.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\no_profile_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\splashscreen.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker1.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker10.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\sticker11.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\sticker2.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker3.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker4.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker5.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker6.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker7.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker8.webp" />
+	  <AndroidResource Include="Resources\drawable-hdpi\Sticker9.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\addImage.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ChatHeads.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\CodeVerification.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\default_group.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\default_page.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ic_trash_action.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ic_trash_fixed.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ImagePlacholder.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ImagePlacholder_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\ImagePlacholder_circle_grey.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Image_File.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\logo.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\msg_round_load_m.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\no_profile_female_image.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\no_profile_female_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\no_profile_image.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\no_profile_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\splashscreen.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker1.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker10.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\sticker11.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\sticker2.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker3.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker4.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker5.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker6.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker7.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker8.webp" />
+	  <AndroidResource Include="Resources\drawable-xhdpi\Sticker9.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\addImage.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ChatHeads.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\CodeVerification.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\default_group.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\default_page.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ic_trash_action.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ic_trash_fixed.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ImagePlacholder.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ImagePlacholder_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\ImagePlacholder_circle_grey.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Image_File.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\logo.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\msg_round_load_m.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\no_profile_female_image.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\no_profile_female_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\no_profile_image.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\no_profile_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\splashscreen.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker1.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker10.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\sticker11.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\sticker2.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker3.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker4.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker5.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker6.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker7.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker8.webp" />
+	  <AndroidResource Include="Resources\drawable-xxhdpi\Sticker9.webp" />
+	  <AndroidResource Include="Resources\drawable\addImage.webp" />
+	  <AndroidResource Include="Resources\drawable\ChatHeads.webp" />
+	  <AndroidResource Include="Resources\drawable\CodeVerification.webp" />
+	  <AndroidResource Include="Resources\drawable\default_group.webp" />
+	  <AndroidResource Include="Resources\drawable\default_page.webp" />
+	  <AndroidResource Include="Resources\drawable\ic_trash_action.webp" />
+	  <AndroidResource Include="Resources\drawable\ic_trash_fixed.webp" />
+	  <AndroidResource Include="Resources\drawable\ImagePlacholder.webp" />
+	  <AndroidResource Include="Resources\drawable\ImagePlacholder_circle.webp" />
+	  <AndroidResource Include="Resources\drawable\ImagePlacholder_circle_grey.webp" />
+	  <AndroidResource Include="Resources\drawable\Image_File.webp" />
+	  <AndroidResource Include="Resources\drawable\msg_round_load_m.webp" />
+	  <AndroidResource Include="Resources\drawable\no_profile_female_image.webp" />
+	  <AndroidResource Include="Resources\drawable\no_profile_female_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable\no_profile_image.webp" />
+	  <AndroidResource Include="Resources\drawable\no_profile_image_circle.webp" />
+	  <AndroidResource Include="Resources\drawable\splashscreen.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker1.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker10.webp" />
+	  <AndroidResource Include="Resources\drawable\sticker11.webp" />
+	  <AndroidResource Include="Resources\drawable\sticker2.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker3.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker4.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker5.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker6.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker7.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker8.webp" />
+	  <AndroidResource Include="Resources\drawable\Sticker9.webp" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AndHUD" Version="2.0.0" />
+		<PackageReference Include="Anjo.Android.AdColony" Version="4.8.0" />
+		<PackageReference Include="Anjo.Android.AgoraFull" Version="4.0.1" />
+		<PackageReference Include="Anjo.Android.ImageCropper" Version="4.5.0.1" />
+		<PackageReference Include="Anjo.Android.OneSignal" Version="4.8.4.1" />
+		<PackageReference Include="Anjo.Android.Twilio.Video" Version="7.5.1" />
+		<PackageReference Include="Anjoxam.BillingClient.Droid" Version="5.1.0" />
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="Com.Airbnb.Android.Lottie" Version="4.2.2" />
+		<PackageReference Include="Crc32.NET" Version="1.2.0" />
+		<PackageReference Include="DrawableToolbox" Version="1.0.7" />
+		<PackageReference Include="FlexboxLayout.Xamarin.Android" Version="3.0.0" />
+		<PackageReference Include="GoogleGson" Version="2.10.1.1" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+		<PackageReference Include="Karamunting.Android.AmulyaKhare.TextDrawable" Version="1.0.1.1" />
+		<PackageReference Include="Karamunting.Android.JaredRummler.ColorPicker" Version="1.1.0" />
+		<PackageReference Include="Karamunting.Android.Ongakuer.CircleIndicator" Version="2.1.4" />
+		<PackageReference Include="Karamunting.Android.Sephiroth74.ImageViewZoom" Version="2.3.0" />
+		<PackageReference Include="Karamunting.Android.TeamSupercharge.ShimmerLayout" Version="2.1.0" />
+		<PackageReference Include="Laerdal.FFmpeg.Android.Min.Gpl" Version="4.4.28" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="PlayCore" Version="1.10.2-rc2" />
+		<PackageReference Include="Plugin.CurrentActivity" Version="2.1.0.4" />
+		<PackageReference Include="Plugin.Fingerprint" Version="3.0.0-beta.1" />
+		<PackageReference Include="Polly" Version="7.2.3" />
+		<PackageReference Include="Refractored.Controls.CircleImageView" Version="1.2.0-beta" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
+		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.4" />
+		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="2.1.4" />
+		<PackageReference Include="SQLitePCLRaw.provider.e_sqlite3" Version="2.1.4" />
+		<PackageReference Include="Square.OkHttp3" Version="4.9.3.2" />
+		<PackageReference Include="Square.Retrofit2" Version="2.9.0" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+		<PackageReference Include="Xam.Plugin.Geolocator" Version="5.0.0-beta" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Common" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Dash" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Database" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.DataSource" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Decoder" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Extractor" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Hls" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Rtsp" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Transformer" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.18.6" />
+		<PackageReference Include="Xam.Plugins.AndroidX.SlidingUpPanel" Version="1.0.0" />
+		<PackageReference Include="Xamarin.Android.Glide" Version="4.14.2" />
+		<PackageReference Include="Xamarin.Android.Glide.Annotations" Version="4.14.2" />
+		<PackageReference Include="Xamarin.Android.Glide.GifDecoder" Version="4.14.2" />
+		<PackageReference Include="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1.2" />
+		<PackageReference Include="Xamarin.Android.ReactiveX.RxJava" Version="2.2.21.9" />
+		<PackageReference Include="Xamarin.AndroidX.Activity" Version="1.6.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.5.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat.AppCompatResources" Version="1.6.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Arch.Core.Common" Version="2.1.0.17" />
+		<PackageReference Include="Xamarin.AndroidX.Arch.Core.Runtime" Version="2.1.0.17" />
+		<PackageReference Include="Xamarin.AndroidX.AsyncLayoutInflater" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Browser" Version="1.4.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.Core" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.Lifecycle" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Camera.View" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.18" />
+		<PackageReference Include="Xamarin.AndroidX.Collection" Version="1.2.0.6" />
+		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.3" />
+		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout.Solver" Version="2.0.4.11" />
+		<PackageReference Include="Xamarin.AndroidX.CoordinatorLayout" Version="1.2.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.9.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.CursorAdapter" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.CustomView" Version="1.1.0.15" />
+		<PackageReference Include="Xamarin.AndroidX.DocumentFile" Version="1.0.1.16" />
+		<PackageReference Include="Xamarin.AndroidX.DrawerLayout" Version="1.1.1.11" />
+		<PackageReference Include="Xamarin.AndroidX.DynamicAnimation" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.3.5.1" />
+		<PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.5.5.1" />
+		<PackageReference Include="Xamarin.AndroidX.GridLayout" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Interpolator" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Leanback" Version="1.0.0.18" />
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI" Version="1.0.0.17" />
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.V13" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Service" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModelSavedState" Version="2.5.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Loader" Version="1.1.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Media" Version="1.6.0.3" />
+		<PackageReference Include="Xamarin.AndroidX.Media2.Common" Version="1.2.1.4" />
+		<PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" />
+		<PackageReference Include="Xamarin.AndroidX.MultiDex" Version="2.0.1.16" />
+		<PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Print" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.9" />
+		<PackageReference Include="Xamarin.AndroidX.SavedState" Version="1.2.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.SlidingPaneLayout" Version="1.2.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.SwipeRefreshLayout" Version="1.1.0.11" />
+		<PackageReference Include="Xamarin.AndroidX.Transition" Version="1.4.1.9" />
+		<PackageReference Include="Xamarin.AndroidX.VectorDrawable" Version="1.1.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.VersionedParcelable" Version="1.1.1.16" />
+		<PackageReference Include="Xamarin.AndroidX.ViewPager" Version="1.0.0.16" />
+		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.7.1.6" />
+		<PackageReference Include="Xamarin.AndroidX.Work.Work.Runtime.Ktx" Version="2.7.1.6" />
+		<PackageReference Include="Xamarin.BadgeView" Version="1.1.3" />
+		<PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
+		<PackageReference Include="Xamarin.Facebook.Shimmer" Version="1.0.2" />
+		<PackageReference Include="Xamarin.Firebase.Common" Version="120.2.0" />
+		<PackageReference Include="Xamarin.Firebase.Messaging" Version="123.1.1" />
+		<PackageReference Include="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.1.8" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.7.0.2" />
+		<PackageReference Include="Xamarin.Google.Android.Places" Version="2.4.0" />
+		<PackageReference Include="Xamarin.Google.AutoValue.Annotations" Version="1.10.1.1" />
+		<PackageReference Include="Xamarin.Google.Dagger" Version="2.44.2" />
+		<PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.5" />
+		<PackageReference Include="Xamarin.Google.Guava.FailureAccess" Version="1.0.1.9" />
+		<PackageReference Include="Xamarin.Google.ZXing.Core" Version="3.5.1" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="119.6.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Base" Version="119.6.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.0.1.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite" Version="119.6.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="120.4.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Auth.Api.Phone" Version="118.0.1.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Auth.Base" Version="118.0.6" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Base" Version="118.1.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="118.1.0.1" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Cast" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Cast.Framework" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Clearcut" Version="117.0.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.CloudMessaging" Version="117.0.2.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Gass" Version="119.6.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Iid" Version="117.0.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Location" Version="120.0.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="118.0.2.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Measurement" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Measurement.Api" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="121.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Nearby" Version="118.3.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Phenotype" Version="117.0.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Places.PlaceReport" Version="117.0.0.7" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Stats" Version="117.0.3.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="118.0.2" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Wallet" Version="119.1.0.2" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.8.0.1" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.8.0.1" />
+		<PackageReference Include="Xamarin.ReLinker" Version="1.4.4" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="AgoraIO">
+	    <HintPath>..\API\AgoraIO.dll</HintPath>
+	  </Reference>
+	  <Reference Include="AXEmojiView">
+	    <HintPath>..\API\AXEmojiView.dll</HintPath>
+	  </Reference>
+	  <Reference Include="AXEmojiViewIos">
+	    <HintPath>..\API\AXEmojiViewIos.dll</HintPath>
+	  </Reference>
+	  <Reference Include="CircleButton">
+	    <HintPath>..\API\CircleButton.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookAndroid">
+	    <HintPath>..\API\Facebook\FacebookAndroid.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookApplinks">
+	    <HintPath>..\API\Facebook\FacebookApplinks.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookAudienceNetwork">
+	    <HintPath>..\API\Facebook\FacebookAudienceNetwork.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookCommon">
+	    <HintPath>..\API\Facebook\FacebookCommon.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookCore">
+	    <HintPath>..\API\Facebook\FacebookCore.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookLogin">
+	    <HintPath>..\API\Facebook\FacebookLogin.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookMessenger">
+	    <HintPath>..\API\Facebook\FacebookMessenger.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FacebookShare">
+	    <HintPath>..\API\Facebook\FacebookShare.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FloatingView">
+	    <HintPath>..\API\FloatingView.dll</HintPath>
+	  </Reference>
+	  <Reference Include="InAppBilling">
+	    <HintPath>..\API\InAppBilling.dll</HintPath>
+	  </Reference>
+	  <Reference Include="LeonidsLib">
+	    <HintPath>..\API\LeonidsLib.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MatisseImagePicker">
+	    <HintPath>..\API\MatisseImagePicker.dll</HintPath>
+	  </Reference>
+	  <Reference Include="SocketIOClient">
+	    <HintPath>..\API\SocketIOClient.dll</HintPath>
+	  </Reference>
+	  <Reference Include="SplashScreenCore">
+	    <HintPath>..\API\SplashScreenCore.dll</HintPath>
+	  </Reference>
+	  <Reference Include="WoWonderClient">
+	    <HintPath>..\API\WoWonderClient.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>

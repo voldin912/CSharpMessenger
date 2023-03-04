@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/main"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp" >
+	
+	<!--text & Reply & Forward message -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="220dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:background="@drawable/chat_rounded_right_layout"
+		android:id="@+id/bubble_layout">
+
+		<include
+			android:id="@+id/ForwardLayout"
+			layout="@layout/ForwardMessageViewLayout"
+			android:visibility="gone" />
+
+		<include
+			android:id="@+id/replied_message_view"
+			layout="@layout/RepliedMessageViewLayout"
+			android:visibility="gone" />
+		 
+		 <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_weight="1"
+            android:layout_margin="8dp">
+	        <ImageView 
+		        android:id="@+id/IconTypeFile"
+		        android:layout_width="45dp"
+		        android:layout_height="45dp"
+		        android:layout_gravity="center"
+		        android:padding="11dp"
+		        android:layout_marginEnd="8dp"
+		        android:background="@drawable/shape_circle_white"
+		        android:backgroundTint="@color/gnt_white"
+		        android:tint="?attr/colorAccent"
+		        android:src="@drawable/icon_file_vector"/>  
+	        <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/fileName"
+			        android:layout_gravity="center_vertical"
+			        android:textFontWeight="700"
+			        android:textColor="@color/gnt_white"
+			        android:textSize="16dp"
+			        android:textStyle="bold" />   
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/sizeFileText"
+			        android:textSize="12dp"
+			        android:textColor="@color/gnt_white"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginTop="3dp" />
+	        </LinearLayout>  
+        </LinearLayout> 
+	</LinearLayout>
+
+	<!--Reaction Messages-->
+	<ImageView
+		android:id="@+id/ImageCountLike"
+		android:layout_width="18dp"
+		android:layout_height="18dp"
+		android:clickable="true"
+		android:backgroundTint="?attr/colorFill"
+		android:background="@drawable/shape_radius_btn"
+		android:src="@drawable/emoji_love"
+		android:gravity="center"
+		android:visibility="gone"
+		android:padding="1dp"
+		android:translationX="-8dp"
+		android:translationY="5dp"
+		android:scaleType="centerCrop"
+		app:layout_constraintBottom_toBottomOf="@id/bubble_layout"
+		app:layout_constraintStart_toStartOf="@id/bubble_layout"/>
+	 
+	<!--time & name user (group) Messages-->
+	<TextView
+		android:layout_height="wrap_content"
+		android:id="@+id/time"
+		android:textColor="#7B7781"
+		android:textFontWeight="400"
+		android:textSize="12dp"
+		android:layout_width="wrap_content"
+		
+		android:layout_margin="4dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout" />
+	   
+	<!--ic_clock_black_24dp && ic_done_white-->
+	<ImageView
+		android:id="@+id/seen"
+		android:layout_height="10dp"
+		android:layout_width="10dp"
+		android:layout_marginEnd="4dp"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="8dp"
+		android:tint="@color/accent"
+		 
+		android:gravity="center"
+		app:layout_constraintEnd_toStartOf="@id/time"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout"  />
+	 
+	<FrameLayout
+		android:id="@+id/starLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="3dp"
+		android:visibility="gone" 
+		app:layout_constraintEnd_toStartOf="@id/seen"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout">
+		<com.airbnb.lottie.LottieAnimationView
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:id="@+id/starIcon"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:scaleType="fitCenter"
+			app:lottie_loop="false"
+			android:layout_centerInParent="true"
+			app:lottie_fileName="FavAnim.json" />
+		<ImageView
+			android:id="@+id/fav"
+			android:layout_width="15dp"
+			android:layout_height="15dp"
+			android:src="@drawable/icon_star_vector"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_centerInParent="true"
+			android:padding="2dp"  />
+	</FrameLayout> 
+
+</androidx.constraintlayout.widget.ConstraintLayout>  

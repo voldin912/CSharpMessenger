@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<!--@color/primary-->
+	<!--@color/accent-->
+	<!--@color/white-->
+	<!--@color/text_color-->
+	<!--Get colors from: http://www.materialpalette.com/-->
+
+	<color name="accent">#C83747</color>
+	<color name="primary">#93291E</color>
+
+	<color name="primaryDark">#66111b</color>
+	<color name="primaryLight">#F2CFD3</color>
+	<color name="accentLight">#F2CFD3</color>
+ 
+	<color name="DragTransparentBlack">#4D000000</color>
+	<color name="extraDark">#db4041</color>
+	<color name="secound_color">#1e2321</color>
+	<color name="grey_color">#898989</color>
+	<color name="greysecondary_color">#808080</color>
+
+	<color name="StartColorToolBar">@color/gnt_white</color>
+	<color name="EndColorToolBar">#efefef</color>
+
+	<color name="StartColorToolBarDark">#444444</color>
+	<color name="EndColorToolBarDark">#282828</color>
+
+	<color name="anderblack_color">#efefef</color>
+
+	<color name="text_color">#000000</color>
+	<color name="textDark_color">#444</color>
+	<color name="text_color_in_between">#626262</color>
+	<color name="lightcolor">#efefef</color>
+
+	<color name="Dialog_Accent_color">#c7ac56</color>
+	<color name="Dialog_text_color">#fafafa</color>
+	<color name="Dialog_background_color">#5c8487</color>
+	<color name="Dialog_Btn_color">#8c8a8a</color>
+
+	<color name="left_ModePhone_color">#008000</color>
+	<color name="left_ModeEmail_color">#3e0e4c</color>
+	<color name="left_ModeHashtag_color">#0000ff</color>
+	<color name="left_ModeUrl_color">#df541e</color>
+	<color name="left_ModeMention_color">#ff0000</color>
+
+	<color name="right_ModePhone_color">@color/gnt_white</color>
+	<color name="right_ModeEmail_color">@color/gnt_white</color>
+	<color name="right_ModeHashtag_color">@color/gnt_white</color>
+	<color name="right_ModeUrl_color">@color/gnt_white</color>
+	<color name="right_ModeMention_color">@color/gnt_white</color>
+
+	<color name="gnt_test_background_color">#00F4F4F4</color>
+	<color name="gnt_test_background_color_2">#00A3A3A3</color>
+	<color name="gnt_black">#000000</color>
+	<color name="gnt_white">#FFFFFF</color>
+	<color name="gnt_red">#FF0000</color>
+	<color name="gnt_green">#00FF00</color>
+	<color name="gnt_blue">#4285f4</color>
+	<color name="gnt_ad_green">#3A6728</color>
+	<color name="gnt_gray">#808080</color>
+	<color name="gnt_outline">#E0E0E0</color>
+
+	<color name="transparentDark">#F2000000</color>
+
+	<!--MusicBar-->
+	<color name="BackgroundBarPrimeColor">#dfd6d6</color>
+	<color name="BackgroundBarSecondaryColor">#c4bbbb</color>
+	<color name="LoadedBarPrimeColor">#fb4c01</color>
+	<color name="LoadedBarSecondaryColor">#eca277</color>
+
+	<color name="progress_primary">#FFFFFF</color>
+	<color name="progress_secondary">#8affffff</color>
+	<color name="progress_max_active">#FFFFFF</color>
+
+	<color name="green100">#c8e6c9</color>
+	<color name="greenA700">#00ad07</color>
+
+	<color name="red100">#ffcdd2</color>
+	<color name="redA700">#d50000</color>
+
+	<color name="bottom_navigation_transparent">#10ff007f</color>
+
+</resources>

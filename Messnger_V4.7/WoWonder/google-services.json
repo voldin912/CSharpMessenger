@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676583014503",
+    "project_id": "chaturnal",
+    "storage_bucket": "chaturnal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676583014503:android:03d75b84a14fcd62a714c2",
+        "android_client_info": {
+          "package_name": "com.chaturnal.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676583014503-8e9ahbogatdrtvgqrmmqu1hqq9jhqlq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEaprVAuF-1Sz8ub5Vfhuq-12AX-NG4YA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676583014503-8e9ahbogatdrtvgqrmmqu1hqq9jhqlq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

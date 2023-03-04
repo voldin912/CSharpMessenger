@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true"
+	android:layout_width="match_parent"
+	android:background="@drawable/rounded_dialog"
+	android:layout_height="wrap_content">
+	<!--Head Page -->
+	<LinearLayout
+		android:id="@+id/mainLayout"
+		android:layout_width="match_parent"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_height="20dp">
+		<View
+			android:layout_width="80dp"
+			android:layout_height="4dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:background="?attr/colorDivider" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/reactLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:minHeight="70dp"
+		android:weightSum="6"
+		android:orientation="horizontal">
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonOne"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			style="@style/ReactImageButton"/>
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonTwo"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			style="@style/ReactImageButton"/>
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonThree"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			style="@style/ReactImageButton"/>
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonFour"
+			android:layout_weight="1"
+			style="@style/ReactImageButton"
+			android:background="?attr/selectableItemBackground"/>
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonFive"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			style="@style/ReactImageButton"/>
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:minHeight="70dp"
+			android:id="@+id/imgButtonSix"
+			android:layout_weight="1"
+			android:background="?attr/selectableItemBackground"
+			style="@style/ReactImageButton"/>
+	</LinearLayout>
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recyler"
+		android:clickable="true"
+		android:focusable="false"
+		android:layout_marginTop="8dp"
+		android:focusableInTouchMode="true"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="none" />
+	 
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="?android:attr/actionBarSize"/>
+
+</LinearLayout>

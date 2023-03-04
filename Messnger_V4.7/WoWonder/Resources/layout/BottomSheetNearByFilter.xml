@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:fitsSystemWindows="true"
+	android:background="@drawable/rounded_dialog"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<!--Head Page -->
+	<LinearLayout
+		android:id="@+id/mainLayout"
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:layout_gravity="center"
+		android:gravity="center">
+		<View
+			android:layout_width="80dp"
+			android:layout_height="4dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:background="?attr/colorDivider" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/header"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:orientation="horizontal"
+		android:gravity="center_vertical">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:text="@string/Lbl_FilterFriends"
+			android:layout_marginStart="15dp"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="20dp"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<ImageView
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:tint="@color/accent"
+				android:src="@drawable/icon_gender_vector"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Gender"
+				android:textSize="16sp"
+				android:textFontWeight="500"
+				android:layout_marginStart="15dp"
+				android:gravity="center_vertical"/>
+		</LinearLayout>
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/GenderRecyler"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		android:layout_marginVertical="10dp"/>
+
+	<!--Distance Section -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:gravity="center_horizontal"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="25dp">
+
+		<LinearLayout
+			android:id="@+id/DistanceTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<ImageView
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:tint="@color/accent"
+				android:src="@drawable/icon_place_vector"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Distance"
+				android:textSize="16sp"
+				android:textFontWeight="500"
+				android:layout_marginStart="15dp"
+				android:gravity="center_vertical"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/Distancenumber"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:textSize="12sp"
+			android:layout_marginEnd="10dp"  />
+		<com.google.android.material.slider.Slider
+			android:id="@+id/distanceSeeker"
+			style="@style/Widget.App.Slider"
+			app:thumbColor="@color/accent"
+			android:layout_below="@+id/DistanceTextView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25dp" />
+	</RelativeLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		android:layout_marginVertical="10dp"/>
+
+	<!--Online Section -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="25dp"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<ImageView
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:tint="@color/accent"
+				android:src="@drawable/icon_status_vector"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Status"
+				android:textSize="16sp"
+				android:textFontWeight="500"
+				android:layout_marginStart="15dp"
+				android:gravity="center_vertical"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:orientation="horizontal">
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/btn_status_all"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:layout_marginEnd="10dp"
+				android:textSize="14sp"
+				android:text="@string/Lbl_All"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textColor="@color/accent"
+				android:background="@drawable/round_button_normal"
+					/>
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/btn_status_online"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:layout_marginEnd="10dp"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:textSize="14sp"
+				android:text="@string/Lbl_Online"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:background="@drawable/round_button_outline_light"
+					/>
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/btn_status_offline"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:layout_marginEnd="10dp"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:textSize="14sp"
+				android:text="@string/Lbl_Offline"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:background="@drawable/round_button_outline_light"
+					/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		android:layout_marginVertical="10dp"/>
+
+	<!--Relationship Section -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="25dp"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<ImageView
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:tint="@color/accent"
+				android:src="@drawable/icon_relationship_vector"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Relationship"
+				android:textSize="16sp"
+				android:textFontWeight="500"
+				android:layout_marginStart="15dp"
+				android:gravity="center_vertical"/>
+		</LinearLayout>
+
+		<HorizontalScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scrollbars="none">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="17dp"
+				android:orientation="horizontal">
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_relation_all"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginBottom="10dp"
+					android:textSize="14sp"
+					android:paddingStart="20dp"
+					android:paddingEnd="20dp"
+					android:text="@string/Lbl_All"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="@color/accent"
+					android:background="@drawable/round_button_normal"
+					/>
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_single"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginBottom="10dp"
+					android:textSize="14sp"
+					android:text="@string/Lbl_Single"
+					android:paddingStart="20dp"
+					android:paddingEnd="20dp"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:background="@drawable/round_button_outline_light"
+						/>
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_relationship"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginBottom="10dp"
+					android:textSize="14sp"
+					android:text="@string/Lbl_Relationship"
+					android:paddingStart="20dp"
+					android:paddingEnd="20dp"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:background="@drawable/round_button_outline_light"
+						/>
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_married"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginBottom="10dp"
+					android:textSize="14sp"
+					android:paddingStart="20dp"
+					android:paddingEnd="20dp"
+					android:text="@string/Lbl_Married"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:background="@drawable/round_button_outline_light"
+						/>
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/btn_engaged"
+					android:layout_width="wrap_content"
+					android:layout_height="40dp"
+					android:layout_marginEnd="10dp"
+					android:layout_marginBottom="10dp"
+					android:textSize="14sp"
+					android:paddingStart="20dp"
+					android:paddingEnd="20dp"
+					android:text="@string/Lbl_Engaged"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:background="@drawable/round_button_outline_light"
+						/>
+			</LinearLayout>
+		</HorizontalScrollView>
+	</LinearLayout>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		android:layout_marginVertical="10dp"/>
+
+	<!--Buttons Section -->
+	<LinearLayout
+		android:id="@+id/pre_footer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_above="@id/footer"
+		android:gravity="center_vertical"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="30dp">
+		<TextView
+			android:id="@+id/Resetbutton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:textFontWeight="500"
+			android:gravity="center"
+			android:text="@string/Lbl_ResetFilter"
+			android:textSize="16sp"
+			android:textColor="@color/accent"
+			android:layout_marginVertical="10dp" />
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/ApplyButton"
+			android:background="@drawable/round_button_pressed"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:textFontWeight="500"
+			android:text="@string/Lbl_ApplyFilter"
+			android:textColor="@color/gnt_white"
+			android:textAllCaps="false"
+			android:textSize="16sp"
+			android:clickable="true"/>
+	</LinearLayout>
+	<View
+		android:id="@+id/footer"
+		android:layout_height="?android:attr/actionBarSize"
+		android:layout_width="match_parent" />
+</LinearLayout>

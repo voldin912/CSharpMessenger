@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorFill" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:outlineProvider="none"
+		app:elevation="0dp" 
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:theme="@style/ToolbarTheme"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="?attr/colorFill"
+			app:titleTextAppearance="@style/Toolbar.TitleText">
+          <AutoCompleteTextView
+	          android:id="@+id/searchBox"
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content" 
+	          android:textSize="14sp"
+	          android:layout_centerVertical="true"
+	          android:hint="@string/Lbl_Search"
+	          android:padding="10dp"
+	          android:layout_marginEnd="10dp"
+	          android:layout_marginStart="0dp"
+	          android:background="@drawable/create_border_edit_text"
+	          android:drawableStart="@drawable/icon_search_vector"
+	          android:drawablePadding="10dp"
+	          android:drawableTint="@color/accent"
+	          android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+	          android:singleLine="true"
+	          android:imeOptions="actionSearch" /> 
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyler"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:inflatedId="@+id/subView"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:layout="@layout/EmptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:id="@+id/sectionProgress"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/floatingActionButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:clickable="true"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@android:color/transparent"
+            android:src="@drawable/icon_filter_vector"
+            app:tint="@color/gnt_white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            app:backgroundTint="@color/accent"
+            android:layout_marginBottom="40dp" />
+    </RelativeLayout>
+</LinearLayout>

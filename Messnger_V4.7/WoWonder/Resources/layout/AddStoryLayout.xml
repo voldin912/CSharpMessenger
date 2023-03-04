@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:outlineProvider="none"
+		app:elevation="0dp" 
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:theme="@style/ToolbarTheme"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="?attr/colorFill"
+			app:titleTextAppearance="@style/Toolbar.TitleText">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+	<RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:id="@+id/storyDisplay" >
+		<ImageView
+			android:id="@+id/imagstoryDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+			android:gravity="center_vertical" 
+			android:adjustViewBounds="true"
+	        android:layout_gravity="center_vertical"
+	        android:layout_centerInParent="true"/>
+		 
+		<LinearLayout
+			android:id="@+id/firstLiner"
+	     	android:layout_width="match_parent"
+	     	android:layout_alignParentStart="true"
+	     	android:layout_alignParentBottom="true"
+	     	android:orientation="horizontal" 
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:layout_marginTop="10dp"
+			android:backgroundTint="?attr/colorFill"
+			android:background="@drawable/button_background"
+			android:layout_height="wrap_content" >
+	     	<ImageView
+	     		android:id="@+id/emojiicon"
+	     		android:layout_width="25dp"
+	     		android:layout_height="25dp"
+				android:tint="#444"
+	     		android:src="@drawable/icon_smile_vector"
+	     		android:scaleType="fitCenter"
+				android:layout_gravity="center" 
+				android:gravity="center" 
+	     		android:layout_marginStart="8dp" />
+	     	<com.aghajari.emojiview.view.AXEmojiEditText
+	     		android:id="@+id/EmojiconEditText5"
+	     		android:layout_width="match_parent"
+	     		android:layout_height="wrap_content"
+				android:layout_weight="1"
+	     		android:maxHeight="120dp"
+				android:minHeight="45dp"
+	     		android:layout_alignParentStart="true"
+	     		android:layout_marginStart="6dp"
+	     		android:textSize="17dp"
+	     		android:hint="@string/Lbl_Add_caption"
+	     		android:layout_gravity="center"
+	            android:background="@null"
+	     		android:maxLines="6"
+	     		android:layout_marginBottom="0dp"
+	     		android:paddingStart="20dp"
+	     		android:paddingEnd="20dp" />	
+	        <at.markushi.ui.CircleButton
+		        android:layout_width="40dp" 
+		        android:layout_height="40dp"
+		        app:cb_color="@color/accent"
+		        app:cb_pressedRingWidth="4dip"
+		        android:src="@drawable/icon_send_vector"  
+		        android:tint="@color/gnt_white" 
+		        android:id="@+id/sendButton" 
+		        android:layout_gravity="center"
+		        android:padding="3dp" 
+		        android:layout_alignParentEnd="true"
+		        android:layout_alignParentBottom="true"
+		        android:layoutDirection="ltr" />
+		</LinearLayout> 
+	</RelativeLayout> 
+</LinearLayout>

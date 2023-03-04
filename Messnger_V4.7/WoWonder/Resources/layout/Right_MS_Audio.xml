@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/main"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp">
+
+	<!--text & Reply & Forward message -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:background="@drawable/chat_rounded_right_layout"
+		android:id="@+id/bubble_layout">
+
+		<include
+			android:id="@+id/ForwardLayout"
+			layout="@layout/ForwardMessageViewLayout"
+			android:visibility="gone" />
+
+		<include
+			android:id="@+id/replied_message_view"
+			layout="@layout/RepliedMessageViewLayout"
+			android:visibility="gone" />
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:minHeight="65dp">
+			<FrameLayout
+				android:layout_marginStart="8dp"
+				android:layout_marginBottom="5dp"
+				android:layout_gravity="center"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<at.markushi.ui.CircleButton
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					app:cb_color="?attr/colorFill"
+					app:cb_pressedRingWidth="0dip"
+					android:tint="#444444"
+					android:src="@drawable/icon_play_vector"
+					android:id="@+id/playButton"
+					android:tag="Play"
+					android:padding="3dp"
+					android:scaleType="fitXY"
+					android:layout_gravity="center" />
+				<ProgressBar
+					android:id="@+id/loadingProgressview"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:max="100"
+					android:progress="0"
+					android:visibility="gone"
+					android:layout_gravity="center"
+					android:layout_marginEnd="1dp"
+					android:layout_marginStart="1dp"
+					android:indeterminateTint="@color/gnt_white"
+					android:indeterminate="true" />
+			</FrameLayout>
+			<LinearLayout
+				android:layout_width="170dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginTop="5dp"
+				android:layout_marginStart="5dp"
+				android:layout_marginEnd="5dp">
+				<androidx.appcompat.widget.AppCompatSeekBar
+					android:id="@+id/seek_song_progressbar"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:progress="0"
+					android:progressTint="@color/gnt_white"
+					android:secondaryProgressTint="@color/gnt_white"
+					android:progressBackgroundTint="@color/gnt_white"
+					android:thumbTint="@color/gnt_white"
+					android:theme="@style/MySeekBar" />
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:layout_width="85dp"
+						android:layout_height="wrap_content"
+						android:id="@+id/Duration"
+						android:textSize="11dp"
+						android:text="00:00"
+						android:layout_marginStart="5dp"
+						android:layout_weight="1"
+						android:textColor="@color/gnt_white"
+						android:gravity="start|center"
+						android:layout_gravity="start|center" /> 
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<!--Reaction Messages-->
+	<ImageView
+		android:id="@+id/ImageCountLike"
+		android:layout_width="18dp"
+		android:layout_height="18dp"
+		android:clickable="true"
+		android:backgroundTint="?attr/colorFill"
+		android:background="@drawable/shape_radius_btn"
+		android:src="@drawable/emoji_love"
+		android:gravity="center"
+		android:visibility="gone"
+		android:padding="1dp"
+		android:translationX="-8dp"
+		android:translationY="5dp"
+		android:scaleType="centerCrop"
+		app:layout_constraintBottom_toBottomOf="@id/bubble_layout"
+		app:layout_constraintStart_toStartOf="@id/bubble_layout"/>
+
+	<!--time & name user (group) Messages-->
+	<TextView
+		android:layout_height="wrap_content"
+		android:id="@+id/time"
+		android:textColor="#7B7781"
+		android:textFontWeight="400"
+		android:textSize="12dp"
+		android:layout_width="wrap_content"  
+		android:layout_margin="4dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout" />
+
+	<!--ic_clock_black_24dp && ic_done_white-->
+	<ImageView
+		android:id="@+id/seen"
+		android:layout_height="10dp"
+		android:layout_width="10dp"
+		android:layout_marginEnd="4dp"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="8dp"
+		android:tint="@color/accent"
+		android:gravity="center"
+		app:layout_constraintEnd_toStartOf="@id/time"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout"  />
+	
+	<FrameLayout
+		android:id="@+id/starLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="3dp"
+		android:visibility="gone" 
+		app:layout_constraintEnd_toStartOf="@id/seen"
+		app:layout_constraintTop_toBottomOf="@id/bubble_layout">
+		<com.airbnb.lottie.LottieAnimationView
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:id="@+id/starIcon"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:scaleType="fitCenter"
+			app:lottie_loop="false"
+			android:layout_centerInParent="true"
+			app:lottie_fileName="FavAnim.json" />
+		<ImageView
+			android:id="@+id/fav"
+			android:layout_width="15dp"
+			android:layout_height="15dp"
+			android:src="@drawable/icon_star_vector"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_centerInParent="true"
+			android:padding="2dp"  />
+	</FrameLayout> 
+
+</androidx.constraintlayout.widget.ConstraintLayout>  

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:fitsSystemWindows="false"
+	android:orientation="vertical">
+
+	<androidx.viewpager.widget.ViewPager
+		android:id="@+id/view_pager"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1" />
+
+	<LinearLayout
+		android:id="@+id/layoutDots"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="?attr/colorFill"
+		android:gravity="center|top"
+		android:orientation="horizontal" />
+ 
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="80dp"
+		android:orientation="horizontal"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginStart="20dp" 
+		android:layout_marginEnd="20dp">
+
+		<TextView
+			android:id="@+id/btn_skip"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_gravity="start|center"
+			android:textFontWeight="500"
+			android:gravity="center"
+			android:paddingStart="30dp"
+			android:paddingEnd="30dp"
+			android:text="@string/Lbl_Skip"
+			android:textSize="16sp"
+			android:textColor="@color/accent"  />
+		 
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btn_next"
+			android:background="@drawable/round_button_pressed"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:textFontWeight="500"
+			android:text="@string/Lbl_Next"
+			android:textColor="@color/gnt_white"
+			android:textAllCaps="false"
+			android:paddingStart="30dp"
+			android:paddingEnd="30dp"
+			android:gravity="center"
+			android:layout_gravity="end|center"
+			android:textSize="16sp"
+			android:clickable="true"/>
+		  
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btn_done"
+			android:background="@drawable/round_button_pressed"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:textFontWeight="500"
+			android:text="@string/Lbl_GetStarted"
+			android:textColor="@color/gnt_white"
+			android:textAllCaps="false"
+			android:visibility="gone"
+			android:layout_marginHorizontal="10dp"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:textSize="16sp"
+			android:clickable="true"/>
+		  
+	</FrameLayout>
+
+</LinearLayout>

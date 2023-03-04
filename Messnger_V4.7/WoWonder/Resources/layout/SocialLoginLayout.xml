@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/SocialLogin_Layout"
+	android:gravity="center"
+	android:orientation="vertical">
+	 
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textAllCaps="false"
+		android:text="@string/Lbl_OrConnectWith"
+		android:layout_marginStart="10dp"
+		android:layout_marginEnd="10dp"
+		android:layout_marginTop="40dp"
+		android:textSize="12sp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_margin="10dp" >
+		<LinearLayout
+			android:id="@+id/ll_fblogin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="5dp"
+			android:gravity="center" >
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/icon_facebook_vector"
+				android:padding="12dp"
+				android:background="@drawable/shape_circle_white"
+				android:backgroundTint="?attr/colorDivider"
+				android:layout_gravity="center" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/ll_Googlelogin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="5dp"
+			android:gravity="center" >
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/icon_google_vector"
+				android:padding="12dp"
+				android:background="@drawable/shape_circle_white"
+				android:backgroundTint="?attr/colorDivider"
+				android:layout_gravity="center" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

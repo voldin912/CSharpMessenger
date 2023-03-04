@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WoWonder", "WoWonder\WoWonder.csproj", "{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16CB5F9-FC03-4E91-B3BE-D69B914D0F23}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0B56ADE-C380-41A6-BCDE-F97DD9C50316}
+	EndGlobalSection
+EndGlobal

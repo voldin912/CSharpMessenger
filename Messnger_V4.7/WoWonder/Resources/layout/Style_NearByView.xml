@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="12dp"
+	app:cardBackgroundColor="?attr/colorFill"
+	app:cardCornerRadius="12dp" 
+	app:cardElevation="1dp">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		 
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="16dp">
+			<ImageView
+				android:id="@+id/ImageAvatar"
+				android:scaleType="centerCrop"
+				android:layout_width="64dp"
+				android:layout_height="64dp"
+				android:focusable="false"
+				android:clickable="false"
+				android:src="@drawable/no_profile_image_circle" />
+			<View
+				android:id="@+id/ImageLastseen"
+				android:layout_width="15dp"
+				android:layout_height="15dp"
+				android:layout_marginBottom="1dp"
+				android:layout_gravity="end"
+				android:layout_below="@id/ImageAvatar"
+				android:background="@drawable/icon_offline_vector" />
+		</FrameLayout>
+
+		<TextView
+			android:id="@+id/name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:lines="1"
+			android:layout_marginTop="12dp"
+			android:text="Marcus Siphron"
+			android:layout_gravity="center"
+			android:drawablePadding="5dp"
+			android:textSize="16sp"
+			android:textStyle="bold"/>
+		 
+		<TextView
+			android:id="@+id/time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:lines="1"
+			android:text="3 Days ago"
+			android:layout_gravity="center"
+			android:drawablePadding="5dp"
+			android:layout_marginTop="4dp"
+			android:textSize="12sp" 
+			android:textColor="@color/text_color_in_between"/>
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:background="@drawable/round_button_outline"
+			android:layout_height="32dp"
+			android:layout_width="88dp"
+			android:text="@string/Lbl_Follow"
+			android:textColor="@color/accent"
+			android:textSize="12sp"
+			android:lineHeight="16dp"
+			android:textFontWeight="500"
+			android:layout_marginTop="12dp"
+			android:layout_marginBottom="16dp"
+			android:clickable="true"
+			android:textAllCaps="false"
+			android:textStyle="bold"
+			android:layout_gravity="center"
+			android:id="@+id/followButton" />
+		 
+	</LinearLayout>
+</androidx.cardview.widget.CardView>
